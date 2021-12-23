@@ -7,9 +7,11 @@ Interface de linha de comando (Manipulação de Objetos do Doker)
 
 
  Criar Container - {
-       docker container create --name (nomeDaImagem) (imagemSO)
-       docker container create --name teste alpine
-       docker container create --name (nomeDaImagem) --it (i= Iniciar de forma interativa para receber comandos do hospedeiro | t= utilizar um terminal) alpine (imagemSO) sh (sh=shell)
+       - docker container create --name (nomeDaImagem) (imagemSO)
+       
+       - docker container create --name teste alpine
+       
+       - docker container create --name (nomeDaImagem) --it (i= Iniciar de forma interativa para receber comandos do hospedeiro | t= utilizar um terminal) alpine (imagemSO) sh (sh=shell)
        
        
        
@@ -18,13 +20,15 @@ Interface de linha de comando (Manipulação de Objetos do Doker)
  } 
  
  Remover Container - {
-        docker rm teste
-        docker container rm (nomeDaImagem)
+        - docker rm teste
+        
+        - docker container rm (nomeDaImagem)
  }
  
  
  Ciclo de Vida - {
         - Inicializaçao: docker container
+        
         - Status {
            UP: Ativo
            Exited: Parado       
@@ -33,8 +37,10 @@ Interface de linha de comando (Manipulação de Objetos do Doker)
      
  Inicializar Container {
         
-        - docker container start (nomeDaImagem)               
+        - docker container start (nomeDaImagem)
+        
         - docker container start teste2
+        
         - docker container ls {
            * Visualiza as informações dos containers    
           } 
@@ -42,6 +48,7 @@ Interface de linha de comando (Manipulação de Objetos do Doker)
         - docker container start -ia teste2 {
             * Conexão com o container teste2 e acessa o terminal
           }
+          
         - docker container run -it --name teste alpine sh {
             * Cria, Iniciar e Conecta ao Container
           }
@@ -49,16 +56,17 @@ Interface de linha de comando (Manipulação de Objetos do Doker)
  
  Conexão com Container {
         - docker container attach (nome/identificacao)
+        
         - docker container attach teste2
  }      
  
- Renomear Container {
-        docker container rename (nome/id) (novoNome)
+ - Renomear Container {
+        - docker container rename (nome/id) (novoNome)
  }
  
  
  - Executar comandos dentro do container sem precisar acesse-ló de forma direta {
-   docker container exec (nomeContainer) (comando)
+        - docker container exec (nomeContainer) (comando)
    
  }
  
