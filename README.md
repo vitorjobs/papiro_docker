@@ -107,3 +107,10 @@ Interface de linha de comando (Manipulação de Objetos do Doker)
   - obs: pwd = diretório atual
 
   }
+
+- Rodar um serviço web em background {
+  - docker container run -d --name ex-daemon-basic -p 8080:80 -v $(pwd)/html:/usr/share/nginx/html nginx
+  - verificar o container rodando em background: docker container ps
+  - parar container executando em backdround: docker container stop ex-daemon-basic
+
+}
