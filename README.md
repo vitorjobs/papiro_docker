@@ -5,6 +5,10 @@ Estudo do Docker
 Docker CLI
 Interface de linha de comando (Manipulação de Objetos do Doker)
 
+ Listar Containers - {
+      - Docker container ps -a (Listar todos os containers)
+
+ }
 
  Criar Container - {
        - docker container create --name (nomeDaImagem) (imagemSO)
@@ -96,3 +100,10 @@ Interface de linha de comando (Manipulação de Objetos do Doker)
    8080: Porta que será exposta pelo container
    80: porta externa (será usada para acessar a porta 8080)
  }
+
+- Mapeamento de volumes {
+  - Mapear diretórios para o container (Host -> Container)
+  - docker container run -p 8080:80 -v $(pwd)/html:/usr/share/nginx/html nginx
+  - obs: pwd = diretório atual
+
+  }
